@@ -1,8 +1,110 @@
+h1 {
+  display: flex;
+  justify-content: space-between;
+}
+
 .text {
-    width: 500px;
+    width: 425px;
     text-align: center;
     font-size: 18px;
-    border: solid 7px lavender;
-    border-radius: 25px;
+    border: solid 7px #E0C4FB;
+    border-radius: 30px;
+    margin-left: 20%;
+    margin: 2%;
+    font-family: "Monaco";
+  }
+
+  .TopP {
+    margin-top: 10%;
+    margin-bottom: 2%;
+  }
+
+  .BottomP {
+    margin-bottom: 25%;
+  }
+
+  .word-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -15%;
+    margin-bottom: 8%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .word-button {
+    background-color: #ead8ed;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
   
+  .word-button:hover {
+    background-color: #de95ce;
+  }
+
+  .word-button.selected {
+    background-color: #de52c7;
+    color: white;
+  }
+  
+  .word-button:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+  }
+  
+  .selected-words {
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+  .summary {
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    border: solid 7px #FCBEF3;
+    border-radius: 30px;
+    margin-left: 90%;
+    margin: 2%;
+    font-family: "Monaco";
+  }
+  
+  #summaryButton {
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  #summaryButton:hover {
+    color: #de52c7;
+  }
+  
+  #summaryButton strong {
+    font-weight: bold;
+  }
+  
+.recSongs {
+  height: 200px;
+  text-align: center;
+  font-size: 18px;
+  border: solid 7px #E0C4FB;
+  border-radius: 30px;
+  margin-left: 30%;
+  margin: 2%;
+  font-family: "Monaco";
+  float: right;
+  position: fixed;
+  top: 95px;
+  right: 0;
+  width: 350px; 
+}
