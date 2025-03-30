@@ -4,7 +4,11 @@ import "./songRecs.css";
 export default function SongRecs({ tracks }) {
     if (tracks == null) {
         console.log("No songs found");
-        return <p className = "loading"> Loading songs ...</p>;
+        return (
+        <div className = "loadCont">
+            <p className = "loading"> Loading songs ...</p>
+        </div>
+        )
     }
     return (
         <div className = "recSongs">

@@ -34,7 +34,7 @@ function App() {
     <div className="App">
       <div class = "topBar">
         <h1 class = "logoTitle">
-          <img src="https://raw.githubusercontent.com/rlhon/mood-music-app/refs/heads/master/src/Image_Ref/logo.jpg?token=GHSAT0AAAAAAC6RFXBAMWLHFEMVELVHABNUZ7IWSAQ"></img></h1>
+          <img src="https://github.com/rlhon/CatAPI/blob/main/logo.jpg?raw=true"></img></h1>
         <header className = "head">Mood Music</header>
         <a href = "aboutus.html">About Our Project</a>
       </div>

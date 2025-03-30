@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setting up Project
+
+After cloning the github repo, run npm install to install dependencies. 
+Then run npm start. 
+
+### Login
+
+Login will be through spotify. Since the API we are using is under a development app, 
+please use our dummy email and password to test our app. 
+
+Email: moodmusicwics@gmail.com
+Password: wicshackathon2025!
+
 ## Available Scripts
 
 In the project directory, you can run:
