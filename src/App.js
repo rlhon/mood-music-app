@@ -22,11 +22,11 @@ function App() {
     }
   }, []);
   
-/*
-  const handle_summary_click = () => {
-    window.location.href = "summary.html";
-  };
-*/
+// /*
+//   const handle_summary_click = () => {
+//     window.location.href = "summary.html";
+//   };
+// */
 
   return !token ? (
     <Login />
@@ -34,8 +34,9 @@ function App() {
     <div className="App">
       <div class = "topBar">
         <h1 class = "logoTitle">
-          <img src="./Image_Ref/logo.jpg"></img>
-        </h1>
+          <img src="https://raw.githubusercontent.com/rlhon/mood-music-app/refs/heads/master/src/Image_Ref/logo.jpg?token=GHSAT0AAAAAAC6RFXBAMWLHFEMVELVHABNUZ7IWSAQ"></img></h1>
+        <header className = "head">Mood Music</header>
+        <a href = "aboutus.html">About Our Project</a>
       </div>
       <Home />
     </div>

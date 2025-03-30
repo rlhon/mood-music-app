@@ -11,7 +11,8 @@ h1 {
     border-radius: 30px;
     margin-left: 20%;
     margin: 2%;
-    font-family: "Monaco";
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    align-self:flex-start;
   }
 
   .TopP {
@@ -42,6 +43,7 @@ h1 {
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: "Comic Sans MS", cursive, sans-serif;
   }
   
   .word-button:hover {
@@ -94,17 +96,127 @@ h1 {
   }
   
 .recSongs {
-  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: auto;
   text-align: center;
   font-size: 18px;
   border: solid 7px #E0C4FB;
   border-radius: 30px;
   margin-left: 30%;
   margin: 2%;
-  font-family: "Monaco";
+  font-family: "Comic Sans MS", cursive, sans-serif;
   float: right;
-  position: fixed;
-  top: 95px;
-  right: 0;
-  width: 350px; 
+  margin-top: 4%;
+  align-self: flex-start;
 }
+
+.songText {
+  margin-top: 10%;
+  height: 100px;
+  margin-left: 2%;
+  margin-bottom: -14%;
+}
+
+.rec-button {
+  background-color: #ead8ed;
+  border: 1.5px #333 solid;;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #333;
+  margin-bottom: 10%;
+  margin-top: 5%
+}
+
+.rec-button:hover {
+  background-color: #de95ce;
+}
+
+.aboutus {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  height: 7.5em;
+  border-bottom-left-radius:10px 10px;
+  border-bottom-right-radius:10px 10px;
+  background-color: #EAD9EC;
+}
+
+.trackCard {
+  background-color: #ead8ed;
+  padding: 15px 15px;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  display: flex;  
+  align-items: center; 
+  gap: 10px; 
+  width: 80%; 
+  padding-bottom: 5%;
+}
+
+.fullList {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  text-align: center;
+  gap: 15px; 
+  width: 98%; 
+  align-self: flex-start;
+  margin-top: 8%;
+  margin-left: 2%;
+  margin-bottom: -14%;
+}
+
+.trackName {
+  font-weight: bold; 
+  margin-bottom: 5px; 
+  float: right;
+  margin-right: 20%;
+  margin-left: 10%;
+}
+
+.trackArtist {
+  font-size: 0.9em;
+  margin-right: 40%;
+  float: right;
+}
+
+.trackImage {
+  width: 80px; 
+  height: 80px;
+}
+
+.trackInfo {  
+  display: flex;
+  flex-direction: row; 
+  float: right;
+}
+
+.container{
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding-top: 33px;
+}
+
+.loading {
+  font-size: 30px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  margin-right: -20%;
+}
+
+

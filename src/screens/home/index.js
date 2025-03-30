@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import apiClient from "../../spotify";
+import SongRecs from "../songRecs/index.js";
 import "./home.css";
+
 
 export default function Home() {
     // list of words for the users to choose from
@@ -11,6 +13,7 @@ export default function Home() {
     ]
 
     const [selected_words, set_selected_words] = useState([]); // tracks the words selected by the user
+    const [tracks, set_tracks] = useState(null);
 
     // function to handle the selection and unselection of words
     const handle_selected_words = (word) => {
@@ -24,15 +27,21 @@ export default function Home() {
     }
     }
 
-    // const fetchSongs = async () => {
-    //     if (selected_words.length == 0) {
-    //         alert("Please select at least one word to get song recommendations.");
-    //         return;
-    //     }
-
-    //     try {
-    //         const response = await apiClient.get("")
-    //     }
+    const fetchSongs = async () => {
+        
+        if (selected_words.length == 0) {
+            alert("Please select at least one word to get song recommendations.");
+            return;
+        }
+        const queryString = selected_words.join('%2520');
+        try {
+            const response = await apiClient.get(`search?q=${queryString}&type=track&limit=6&offset=5`)
+            set_tracks(response.data.tracks.items);
+            console.log(tracks);
+        } catch (error) {
+            console.error("Error fetching songs:", error);
+        }
+    }
 
     return (
     <div className = "container">
@@ -50,10 +59,14 @@ export default function Home() {
                             {word}
                         </button>
                     ))}
-                </div>
+            </div>
+            <button 
+                class = "rec-button"
+                onClick={fetchSongs}
+                disabled= {selected_words.length !== 3}> Get Song Recommendations</button>
         </div>
-        <div className = "recSongs">
-            <p>Rest of playlist here:</p>
+        <div className = "rightSide">
+            <SongRecs tracks = {tracks} />
         </div>
     </div>
     );
